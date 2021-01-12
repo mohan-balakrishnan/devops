@@ -24,8 +24,6 @@ Using unique ports for each application is a best practice in an environment. Bu
 cd /opt/apache-tomcat-8.5.35/conf
 # update port number in the "connecter port" field in server.xml
 # restart tomcat after configuration update
-tomcatdown
-tomcatup
 ```
 #### check point :
 access tomcat application from browser on prot 8090  
@@ -36,12 +34,7 @@ now application is accessible on port 8090. but tomcat application doesnt allow 
 #search for context.xml
 find / -name context.xml
 ```
-above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory. 
-After that restart tomcat services to effect these changes
-```sh 
-tomcatdown
-tomcatup
-```
+
 Update users information in the tomcat-users.xml file
 goto tomcat home directory and Add below users to conf/tomcat-user.xml file
 ```sh
